@@ -1,0 +1,47 @@
+# umi.js+react  プロジェクト
+
+`yarn creat @umijs/umi-app`  失敗
+
+## 問題１：error Command failed.Exit code: 1
+
+### 調査結果：yarnのグローバルインストール位置とbinの位置は同じハードディスクパーティションでないとできない
+
+### 解決方法：
+
+1.yarn binと yarn globalのインストール位置　チェック
+
+2.yarn global と yarn cache　位置修正
+
+`yarn config set global-folder "指定ルート"`
+
+`yarn config set cache-folder "指定ルート"`
+
+
+
+## 問題２：Error: error:0308010C:digital envelope routines::unsupported
+
+### 調査結果：
+
+node.js V17はOpenSSL3.0が使っており、このOpenSSL3.0は許可アルゴリズムとキーの大きさ制限が一段と厳しくなった
+
+### 解決方法：
+
+方法１、
+
+cmd:
+
+Linux & Mac OS：   `export NODE_OPTIONS=--openssl-legacy-provider`
+
+Windows:   `set  export NODE_OPTIONS=--openssl-legacy-provider`
+
+方法２、
+
+cmd:
+
+`$env:export NODE_OPTIONS"--openssl-legacy-provider"`(今回使った解決策)
+
+方法３、
+
+Node.js17+バージョンアンインストール、その代わりにNode.js17-をインストール
+
+## 最後：yarn start成功 
