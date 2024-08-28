@@ -1,0 +1,19 @@
+１．page初期化
+
+２．ホームページに移行する前：
+
+​	a．baseLayout
+
+​	b．loginLayout
+
+３．umirc.ts で　alias配置
+
+`const { resolve } = require('path');`
+
+`alias: {`
+
+  `utils: resolve(__dirname, './src/utils'),`
+
+ `},`
+
+４．utilsファイル追加、selectLayout.js (a/bいずれか使うための判断)

@@ -1,0 +1,11 @@
+# 問題２：Error: error:0308010C:digital envelope routines::unsupported
+
+毎回プロジェクトスタート事に、問題が起きる
+
+解決策：
+
+１．package.jsonの中で、“scripts”書き換える
+
+`"start": "SET NODE_OPTIONS=--openssl-legacy-provider && umi dev",`
+
+２．node.js v17以前に戻る

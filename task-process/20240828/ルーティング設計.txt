@@ -1,0 +1,31 @@
+# ルーティング定義
+
+## １．ユーザーに関する
+
+​	１．ユーザー登録　＝＞　login
+
+​	 2．パスワードリセット　＝＞　forgetPassword
+
+## ２．ホームページに関する
+
+​	１．会社状況分析インタフェース　＝＞　dashborad
+
+​	２．出勤統計　＝＞　attendance
+
+​	３．社員管理　＝＞　staff
+
+​	４．セクション　＝＞　department
+
+​	５．職務レベル　＝＞　level
+
+​	６．パフォーマンス　＝＞　assessment
+
+​	７．給料調整　＝＞　salary
+
+​	８．懲罰記録　＝＞　rewardRecord
+
+​	９．打刻　＝＞　attendanceInfo
+
+## ３．404
+
+マッチできないpage　404まで誘導
