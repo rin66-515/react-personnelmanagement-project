@@ -8,6 +8,8 @@ export default defineConfig({
   //   { path: '/', component: '@/pages/index' },
   // ],
   alias: {
+    common: resolve(__dirname, './src/common'),
+    components: resolve(__dirname, './src/components'),
     utils: resolve(__dirname, './src/utils'),
   },
   fastRefresh: {},
