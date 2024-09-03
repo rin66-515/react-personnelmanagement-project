@@ -3,6 +3,8 @@ import AccountLogin from './components/AccountLogin';
 import SmCodeLogin from './components/SmCodeLogin';
 import IconMap from 'components/IconMap';
 import { Button, Form, Input, Row, Col } from 'antd';
+import './css/login.less';
+import iconImg from 'common/img/icon.svg';
 
 const FormItem = Form.Item;
 
@@ -23,13 +25,15 @@ const login = () => {
   return (
     <div class="form">
       <div className="accountLogo">
-        <img src="" alt="" />
+        <img src={iconImg} alt="" />
         <span>rin6人事管理システム</span>
       </div>
       <Form form={form} onFinish={sumbitUserInfo}>
         {ComponentSelector({ form, FormItem, Input })}
         <Row>
-          <Button type="primary">ログイン</Button>
+          <Button type="primary" block="true">
+            ログイン
+          </Button>
         </Row>
         <Row>
           <Col span={9}>パスワードを忘れた</Col>
