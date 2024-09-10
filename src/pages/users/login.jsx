@@ -35,9 +35,9 @@ const login = () => {
             ログイン
           </Button>
         </Row>
-        <Row>
-          <Col span={9}>パスワードを忘れた</Col>
-          <Col span={9} onClick={onSwitch}>
+        <Row className="ft-12">
+          <Col span={6}>パスワードを忘れた</Col>
+          <Col span={18} onClick={onSwitch} className="align-right">
             {type ? '携帯電話からログイン' : 'アカウントからログイン'}
             {IconMap.arrRowRight}
           </Col>
