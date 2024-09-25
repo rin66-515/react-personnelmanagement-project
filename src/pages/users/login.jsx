@@ -10,7 +10,7 @@ const FormItem = Form.Item;
 
 const login = () => {
   const [form] = Form.useForm();
-  const [type, setType] = useState(false);
+  const [type, setType] = useState(1);
   // フォームsubmit
   const sumbitUserInfo = (data) => {
     console.log(data);
