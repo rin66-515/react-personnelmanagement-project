@@ -23,7 +23,7 @@ const login = () => {
     setType(!type);
   };
   return (
-    <div class="form">
+    <div className="form">
       <div className="accountLogo">
         <img src={iconImg} alt="" />
         <span>rin6人事管理システム</span>

@@ -1,14 +1,19 @@
 import React from 'react';
 import IconMap from 'components/IconMap';
+import { loginRule } from 'utils/rules';
 
 const accountLogin = ({ Input, FormItem }) => {
   return (
     <>
-      <FormItem>
+      <FormItem name="accountName" rules={loginRule.userRule} hasFeedback>
         <Input placeholder="アカウント名入力" prefix={IconMap.userIcon} />
       </FormItem>
-      <FormItem>
-        <Input placeholder="パスワード入力" prefix={IconMap.passwordIcon} />
+      <FormItem name="password" rules={loginRule.passwordRule} hasFeedback>
+        <Input
+          placeholder="パスワード入力"
+          prefix={IconMap.passwordIcon}
+          type="password"
+        />
       </FormItem>
     </>
   );
